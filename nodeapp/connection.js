@@ -1,11 +1,11 @@
 const mysql = require('mysql');
 
 const con = mysql.createConnection({
-    host: "database-1.clgiazqwb1tq.us-east-1.rds.amazonaws.com", //changes
+    host: "database-1.cld2dbhfq2vt.us-east-1.rds.amazonaws.com", //changes
     user: "admin",
     database: "cat3",
     port: "3306",
-    password: "12345678",
+    password: "123456789",
     connectionLimit: 15,
     queueLimit: 30,
     acquireTimeout: 1000000
