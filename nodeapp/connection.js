@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 
 const con = mysql.createConnection({
-    host: "database-1.cld2dbhfq2vt.us-east-1.rds.amazonaws.com", //changes
+    host: "hospital.cd1m9v2bcbxo.us-east-1.rds.amazonaws.com", //changes
     user: "admin",
     database: "cat3",
     port: "3306",
