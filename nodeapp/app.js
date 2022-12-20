@@ -55,7 +55,7 @@ app.use('/users', usersRouter);
 //submit
 app.post('/submit',function(req,res,next){
   var name = req.body.name;
-  var id = req.body.eid;
+  var id = req.body.id;
   var sql = `Insert into hospital (docid,dname) VALUES ("${id}","${name}")`;
   connection.query(sql,function(err,result){
     if(err) throw err;
