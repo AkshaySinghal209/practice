@@ -56,7 +56,7 @@ app.use('/users', usersRouter);
 app.post('/submit',function(req,res,next){
   var name = req.body.name;
   var id = req.body.eid;
-  var sql = `Insert into employee (eid,ename) VALUES ("${id}","${name}")`;
+  var sql = `Insert into hospital (docid,dname) VALUES ("${id}","${name}")`;
   connection.query(sql,function(err,result){
     if(err) throw err;
     res.redirect('/display');
@@ -66,7 +66,7 @@ app.post('/submit',function(req,res,next){
 
 // display button
 app.get('/display',function(req,res,next){
-  var sql = 'Select * from employee';
+  var sql = 'Select * from hospital';
   connection.query(sql,function(err,result){
     if (err) throw err;
     console.log({data:result})
@@ -78,15 +78,15 @@ app.get('/display',function(req,res,next){
 
 
 //display
-app.get('/display',function(req,res){
-  var sql = 'Select * from employee';
-  connection.query(sql,function(err,result){
-    if (err) throw err;
-    console.log({data:result})
-  ///res.render() function
-  res.render('display',{data:result});
-  })
-})
+// app.get('/display',function(req,res){
+//   var sql = 'Select * from employee';
+//   connection.query(sql,function(err,result){
+//     if (err) throw err;
+//     console.log({data:result})
+//   ///res.render() function
+//   res.render('display',{data:result});
+//   })
+// })
 
 
 //login
